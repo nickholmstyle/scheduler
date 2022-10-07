@@ -22,4 +22,3 @@ npm test
 npm run storybook
 ```
 
-## nick
