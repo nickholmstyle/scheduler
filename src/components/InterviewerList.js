@@ -1,11 +1,13 @@
 import React from "react";
 import 'components/InterviewerList.scss'
 import InterviewerListItem from "./InterviewerListItem";
-export default function(props) {
+
+
+const InterviewerList = function(props) {
 
   const interviewers = props.interviewers.map((interviewer) => {
     return (
-      <InterviewerListItem 
+      <InterviewerListItem
         key={interviewer.id}
         name={interviewer.name}
         avatar={interviewer.avatar}
@@ -25,3 +27,4 @@ export default function(props) {
   );
 }
 
+export default InterviewerList;
