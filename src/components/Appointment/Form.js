@@ -16,11 +16,6 @@ const Form = (props) => {
     reset();
     props.onCancel();
   }
-
-  // const save = () => {
-  //   console.log('pressed save button')
-  // }
-
   
 
   return (
@@ -37,9 +32,9 @@ const Form = (props) => {
           />
         </form>
         <InterviewerList 
+          value={interviewer}
           interviewers={props.interviewers}
           onChange={setInterviewer}
-          value={interviewer}
         />
       </section>
       <section className="appointment__card-right">
