@@ -12,30 +12,6 @@ const useApplicationData = () => {
 
   const setDay = day => setState({ ...state, day });
 
-  
-  
-  
-  // const updateSpots = function(id, increment) {
-  //   let index = -1;
-    
-  //   const dayObj = state.days.find((day, i) => {
-  //     index = i;
-  //     if (day.appointments.includes(id)) {
-  //       return day;
-  //     }
-  //   });
-      
-  //   increment ? dayObj.spots++ : dayObj.spots--;
-    
-  //   const days = [...state.days];
-  //   days.splice(index, 1, dayObj);
-
-  //   return days;
-    
-  // }
-
-
-
   const updateSpots = function(state, appointments) {
     
     const dayObj = state.days.find(d => d.name === state.day);
