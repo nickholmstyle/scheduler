@@ -3,7 +3,7 @@ import useVisualMode from "../useVisualMode";
 
 const FIRST = "FIRST";
 const SECOND = "SECOND";
-const THIRD = 'THIRD';
+const THIRD = "THIRD";
 
 test("useVisualMode should return to previous mode", () => {
   const { result } = renderHook(() => useVisualMode(FIRST));
@@ -19,8 +19,6 @@ test("useVisualMode should return to previous mode", () => {
 
   act(() => result.current.back());
   expect(result.current.mode).toBe(FIRST);
-
- 
 });
 
 test("useVisualMode should not return to previous mode if already at initial", () => {

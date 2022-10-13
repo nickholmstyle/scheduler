@@ -4,7 +4,9 @@ const Error = (props) => {
   return (
     <main className="appointment__card appointment__card--error">
       <section className="appointment__error-message">
-        <h1 className="text--semi-bold">Error</h1>
+        <h1 className="text--semi-bold">
+          Sorry, an error has occurred. Please try again.
+        </h1>
         <h3 className="text--light">{props.message}</h3>
       </section>
       <img
@@ -15,6 +17,6 @@ const Error = (props) => {
       />
     </main>
   );
-}
+};
 
 export default Error;
