@@ -62,7 +62,7 @@ const { mode, transition, back } = useVisualMode(props.interview ? SHOW : EMPTY)
 
 
   return (
-    <article className="appointment">
+    <article data-testid="appointment" className="appointment" >
       <Header time={props.time}/>
       {mode === EMPTY && <Empty onAdd={toCreate} />}
       {mode === SHOW && (

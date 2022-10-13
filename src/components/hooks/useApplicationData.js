@@ -32,26 +32,26 @@ const useApplicationData = () => {
   }
 
 
-  const bookInterview = function(id, interview) {
+  const bookInterview = (id, interview) => {
     const appointment = {...state.appointments[id], interview: { ...interview }};
     const appointments = {...state.appointments, [id]: appointment};
     
     const url = `/api/appointments/${id}`;
     return axios.put(url, { interview })
-    .then(res => {
+    .then(() => {
         const days = updateSpots(state, appointments);
         setState(prev => ({ ...prev, appointments, days }));
       });
 
   };
 
-  const cancelInterview = function(id) {
+  const cancelInterview = (id) => {
     const appointment = { ...state.appointments[id], interview: null};
     const appointments = { ...state.appointments, [id]: appointment};
 
     const url = `/api/appointments/${id}`
     return axios.delete(url)
-      .then(res => {
+      .then(() => {
         const days = updateSpots(state, appointments)
         setState(prev => ({ ...prev, appointments, days }));
       });
