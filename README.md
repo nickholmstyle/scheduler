@@ -6,6 +6,8 @@ Project I worked on at Lighthouse Labs to learn how to use React. This is a sing
 
 Install dependencies with `npm install`.
 
+The server for this app runs on port 8001, through an another repo: scheduler-api. https://github.com/lighthouse-labs/scheduler-api
+
 ## Running Webpack Development Server
 
 ```sh
