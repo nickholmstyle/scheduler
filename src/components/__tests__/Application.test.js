@@ -76,7 +76,7 @@ describe("Application", () => {
 
     fireEvent.click(queryByText(appointment, "Confirm"));
 
-    expect(getByText(appointment, "Bye-bye")).toBeInTheDocument();
+    expect(getByText(appointment, "Deleting")).toBeInTheDocument();
 
     await waitForElement(() => getByAltText(appointment, "Add"));
 
@@ -164,7 +164,7 @@ describe("Application", () => {
 
     fireEvent.click(queryByText(appointment, "Confirm"));
 
-    expect(getByText(appointment, "Bye-bye")).toBeInTheDocument();
+    expect(getByText(appointment, "Deleting")).toBeInTheDocument();
 
     waitForElement(() =>
       expect(getByText(appointment, "Error")).toBeInTheDocument()

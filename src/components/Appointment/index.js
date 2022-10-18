@@ -1,5 +1,5 @@
 import React from "react";
-import useVisualMode from "components/hooks/useVisualMode";
+import useVisualMode from "hooks/useVisualMode";
 import "components/Appointment/styles.scss";
 
 import Header from "./Header";
@@ -73,7 +73,7 @@ const Appointment = (props) => {
         <Form interviewers={props.interviewers} onSave={save} onCancel={back} />
       )}
       {mode === SAVING && <Status message={"Saving"} />}
-      {mode === DELETING && <Status message={"Bye-bye"} />}
+      {mode === DELETING && <Status message={"Deleting"} />}
       {mode === CONFIRM && (
         <Confirm
           message={"Are you sure?"}
