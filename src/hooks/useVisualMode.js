@@ -1,5 +1,9 @@
 import { useState } from "react";
 
+//Function that takes state to update state. Transition accounts for the update in change and back uses the history
+//of the transition to return in to its initial value. This "hook" is used to update the state of the form
+// and transition the between the "modes" of the state as the users navigates through the form and makes changes to it.
+
 const useVisualMode = function (initial) {
   const [mode, setMode] = useState(initial);
   const [history, setHistory] = useState([initial]);

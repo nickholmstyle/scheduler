@@ -1,6 +1,13 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
 
+// This hook requests data from our scheduler api and allows the user to update the state of the app.
+// As appointments are booked or cancelled, changes made in the form will either make put or delete
+// requests to the api and update the api database. When booking or cancelling, the function update spots 
+// does just that by taking in the current state and the state of the appoinments object,
+// and increase the number of spots when called. Its not the spots that are returned, but rather the days
+// that have been mapped with the updated spots. 
+
 const useApplicationData = () => {
   const [state, setState] = useState({
     day: "Monday",
@@ -27,6 +34,8 @@ const useApplicationData = () => {
 
     return days;
   };
+
+
 
   const bookInterview = (id, interview) => {
     const appointment = {

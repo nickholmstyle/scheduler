@@ -1,3 +1,6 @@
+// Takes in state and day to filter through the days in order to filter through the appointments
+// and return an array of existing appointments for the day.
+
 const getAppointmentsForDay = function (state, day) {
   const filteredDays = state.days.filter((each) => {
     return each.name === day;
@@ -13,6 +16,9 @@ const getAppointmentsForDay = function (state, day) {
   return filteredAppointments;
 };
 
+// Takes in state and day to filter through the days in order to filter through the interviewers
+// and return an array of existing interviewers for that day.
+
 const getInterviewersForDay = function (state, day) {
   const filteredDays = state.days.filter((each) => {
     return each.name === day;
@@ -27,6 +33,9 @@ const getInterviewersForDay = function (state, day) {
 
   return filteredInterviewers;
 };
+
+// Takes in state and the interview object. Only if an interview exists, return the interview after assigning
+// the interviewer of the interview to the interviewer of the interview of the state of the interviewers array.
 
 const getInterview = function (state, interview) {
   if (!interview) {
